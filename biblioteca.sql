@@ -70,3 +70,34 @@ INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
 
 SELECT *FROM Usuario 
 
+GO
+INSERT INTO Autor(Nombre )VALUES
+('Jose Milla')
+INSERT INTO Autor(Nombre )VALUES
+('Steven Jobs')
+INSERT INTO Autor(Nombre )VALUES
+('Oscar Castellanos')
+INSERT INTO Autor(Nombre )VALUES
+('Pepe Milla')
+INSERT INTO Autor(Nombre )VALUES
+('Alejandro Suarez')
+INSERT INTO Autor(Nombre )VALUES
+('Pablo Vaquez')
+INSERT INTO Autor(Nombre )VALUES
+('Anderson Parada')
+INSERT INTO Autor(Nombre )VALUES
+('Eli Mazariegos')
+INSERT INTO Autor(Nombre )VALUES
+('Esvin Mariano')
+INSERT INTO Autor(Nombre )VALUES
+('Popol Vuh')
+
+SELECT *FROM Autor 
+
+
+
+
+
+
+
+
