@@ -40,9 +40,9 @@ CREATE TABLE Prestano(
 	idPrestano INT IDENTITY PRIMARY KEY,
 	idUsuario INT FOREIGN KEY REFERENCES Usuario(idUsuario),
 	idEjemplar INT FOREIGN KEY REFERENCES Ejemplar(idEjemplar),
-	FechaPrestamo Date NOT NULL UNIQUE,
-	FechaLimite DATE NOT NULL UNIQUE,
-	FechaDevolucion DATE NULL,
+	FechaPrestamo DATE NOT NULL,
+	FechaLimite DATE NOT NULL,
+	FechaDevolucion DATE NULL
 )
 
 
@@ -52,9 +52,9 @@ INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
 INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
 ('steven', 4224242, 'zona 13')
 INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
-('oscar', 879546421, 'zona 14')
+('oscar', 14114117, 'zona 14')
 INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
-('omar', 8675645554, 'zona 15')
+('omar', 45555454, 'zona 15')
 INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
 ('javier', 87621232, 'zona 16')
 INSERT INTO Usuario (Nombre, Telefono, Direccion )VALUES
@@ -95,9 +95,74 @@ INSERT INTO Autor(Nombre )VALUES
 SELECT *FROM Autor 
 
 
+GO
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('el paraiso', 'santillana,', 4444, 200, 1)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('arcoirirs', 'server,', 3333, 250, 2)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('la selva', 'cantassa,', 2222, 120, 3)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('maravillas', 'peass,', 1111, 125, 4)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('la casa', 'powers quiz,', 5555, 300, 5)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('la comunicacion', 'piedra santa,', 7777, 400, 6)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('los seminarios', 'eddesaa,', 9999, 220, 7)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('la novela', 'Santossa,', 4554, 350, 8)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('programacion', 'soliz,', 2121, 100, 9)
+INSERT INTO Libros(Titulo, Editorial, ISBN, Paginas, IdAutor)VALUES
+('mas alla', 'cass,', 4432, 50, 10)
 
+SELECT *FROM Libros
 
+GO
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('AAAA', 1)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('BBBB', 2)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('CCCC', 3)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('DDDD', 4)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('EEEE', 5)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('FFFF', 6)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('GGGG', 7)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('HHHH', 8)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('IIII', 9)
+INSERT INTO Ejemplar(localizacion, idlibro)VALUES
+('MMMM', 10)
 
+SELECT *FROM Ejemplar 
 
+GO
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(1,1, '2011-03-12', '2011-03-20', '2011-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar, FechaPrestamo,FechaLimite, FechaDevolucion)VALUES
+(2,2, '2012-03-12', '2012-03-20', '2012-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar, FechaPrestamo,FechaLimite, FechaDevolucion)VALUES
+(3,3, '2013-03-12', '2013-03-20', '2013-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(4,4, '2014-03-12', '2014-03-20', '2014-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(5,5, '2015-03-12', '2015-03-20', '2015-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(6,6, '2010-03-12', '2010-03-20', '2010-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(7,7, '2009-03-12', '2009-03-20', '2009-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(8,8, '2008-03-12', '2008-03-20', '2008-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(9,9, '2006-03-12', '2006-03-20', '2006-03-17')
+INSERT INTO Prestano(idUsuario, idEjemplar,FechaPrestamo, FechaLimite, FechaDevolucion)VALUES
+(10,10,'2007-03-12', '2007-03-20', '2007-03-17')
 
-
+SELECT * FROM Prestano 
